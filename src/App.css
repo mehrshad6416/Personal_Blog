@@ -13,6 +13,21 @@
   src: url("./assets/fonts/CentraNo2-Medium.ttf");
   font-weight: 500;
 }
+@font-face {
+  font-family: isans;
+  src: url("./assets/fonts/IRANSansWeb_Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: isans;
+  src: url("./assets/fonts/IRANSansWeb.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: isans;
+  src: url("./assets/fonts/IRANSansWeb_Light.ttf");
+  font-weight: 400;
+}
 
 /*Default CSS*/
 
@@ -33,7 +48,8 @@ body{
   position: relative;
   background-color: #121212 !important;
   color: #fff!important;
-  font-family: Centra,sans-serif !important;
+  font-family: isans,sans-serif !important;
+  direction: rtl;
 }
 
 h1 , h2 , h3 , h4 , h5 , h6 {
@@ -96,6 +112,7 @@ nav.navbar.scrolled {
 }
 nav.navbar a.navbar-brand {
   width: 9%;
+  margin-left: 2%;
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
@@ -156,10 +173,11 @@ span.navbar-text {
   border: 1px solid #fff;
   padding: 18px 34px;
   font-size: 18px;
-  margin-left: 18px;
+  margin-right: 18px;
   position: relative;
   background-color: transparent;
   transition: 0.3s ease-in-out;
+
 }
 .navbar-text button span {
   z-index: 1;
