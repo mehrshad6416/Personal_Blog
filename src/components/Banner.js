@@ -1,12 +1,12 @@
 import {useState , useEffect} from "react";
 import {Col, Container ,Row} from "react-bootstrap";
-import { ArrowRightCircle} from "react-bootstrap-icons";
+import { ArrowLeftCircle} from "react-bootstrap-icons";
 import headerImg from "../assets/images/header-img.svg"
 
 export const Banner = () => {
     const [loopNum , setLoopNum] = useState(0);
     const [isDeleting , setIsDeleting] = useState(false);
-    const toRotate = ["برنامه نویس وب" , "فران اند دولپر" , "فری لنسر"];
+    const toRotate = ["توسعه دهنده وب" , "فرانت اند دولوپر"];
     const [text , setText] = useState('');
     const [delta ,setDelta] = useState(300 - Math.random() * 100)
     const period = 2000;
@@ -16,7 +16,7 @@ export const Banner = () => {
             tick();
         },delta)
         return () =>  {clearInterval(ticker)};
-    }, [text]);
+    }, );
     const tick = () => {
         let i = loopNum % toRotate.length;
         let fullText = toRotate[i];
@@ -42,10 +42,10 @@ export const Banner = () => {
             <Container>
                 <Row className="align-items-center">
                     <Col xs={12} md={6} xl={7}>
-                        <span className="tagline">به وبلاگ من خوش آمدید</span>
-                        <h1>{`سلام من مهرشاد هستم `}<span className="wrap">{text}</span></h1>
+                        <span className="tagline" >به وبلاگ من خوش آمدید</span>
+                        <h1 className="">{`سلام من مهرشاد هستم `}<span className="wrap">{text}</span></h1>
                         <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای</p>
-                        <button onClick={() => console.log('connect')}> همکاری با من <ArrowRightCircle size={25}/></button>
+                        <button onClick={() => console.log('connect')}> همکاری با من <ArrowLeftCircle size={25}/></button>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
                         <img src={headerImg} alt="Headder img"/>
